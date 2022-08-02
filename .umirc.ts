@@ -1,3 +1,6 @@
 export default {
-  npmClient: 'npm'
+  npmClient: "npm",
+  history: {
+    type: "hash",
+  },
 };

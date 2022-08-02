@@ -1,6 +1,6 @@
 {
   "private": true,
-  "author":"zhangyj <richard.yujia.zhang@gmail.com>",
+  "author": "zhangyj <richard.yujia.zhang@gmail.com>",
   "scripts": {
     "dev": "umi dev",
     "build": "umi build",
@@ -9,11 +9,13 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "three": "^0.143.0",
     "umi": "^4.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/three": "^0.143.0",
     "typescript": "^4.1.2"
   }
 }
