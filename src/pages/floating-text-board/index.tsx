@@ -6,7 +6,7 @@ import init from "./init";
 
 const { scene, camera, renderer, orbitControl } = init();
 
-const FloatingBallPage: React.FC = () => {
+const FloatingTextBoardPage: React.FC = () => {
   // 自身div
   const divRef = React.createRef<HTMLDivElement>();
 
@@ -21,14 +21,38 @@ const FloatingBallPage: React.FC = () => {
     renderer.render(scene, camera);
   };
 
-  // 创造漂浮球
-  const createFloatingBall = () => {
-    const geo = new THREE.SphereGeometry(5, 64, 64);
-    const material = new THREE.MeshBasicMaterial({
-      color: "#ff0000",
+  // 创造漂浮展板
+  const createFloatingTextBoard = () => {
+    // canvas
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    if (ctx) {
+      ctx.canvas.width = 256;
+      ctx.canvas.height = 256;
+      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+      ctx.fillRect(256, 256, 0, 0);
+      ctx.fillStyle = "rgba(	70,130,180, 50)";
+      ctx.beginPath();
+      ctx.moveTo(28, 28);
+      ctx.lineTo(228, 28);
+      ctx.lineTo(128, 228);
+      ctx.lineTo(28, 28);
+      ctx.fill();
+      ctx.font = "32px serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "bottom";
+      ctx.fillText("FUCK", 128, 28);
+    }
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+
+    const material = new THREE.SpriteMaterial({
+      map: texture,
     });
-    const ball = new THREE.Mesh(geo, material);
-    scene.add(ball);
+
+    const sprite = new THREE.Sprite(material);
+    sprite.scale.set(10, 10, 1);
+    scene.add(sprite);
 
     // 动画参数
     const paras = {
@@ -43,7 +67,7 @@ const FloatingBallPage: React.FC = () => {
       )
       .easing(TWEEN.Easing.Quadratic.InOut)
       .onUpdate(() => {
-        ball.position.y = paras.y;
+        sprite.position.y = paras.y;
       })
       .yoyo(true)
       .repeat(Infinity);
@@ -57,7 +81,7 @@ const FloatingBallPage: React.FC = () => {
     animate();
     const canvas = divRef.current.appendChild(renderer.domElement);
 
-    createFloatingBall();
+    createFloatingTextBoard();
 
     return () => {
       cancelAnimationFrame(idAnimateFrame);
@@ -68,4 +92,4 @@ const FloatingBallPage: React.FC = () => {
   return <div className={styles.root} ref={divRef} />;
 };
 
-export default FloatingBallPage;
+export default FloatingTextBoardPage;
