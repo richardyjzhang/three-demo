@@ -3,4 +3,5 @@ export default {
   history: {
     type: "hash",
   },
+  publicPath: "/three-demo/",
 };
