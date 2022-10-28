@@ -44,6 +44,11 @@ const HomePage: React.FC = () => {
       address: "obj-texture",
       img: img3,
     },
+    {
+      description: "三维集成高德地图",
+      address: "three-amap",
+      img: img3,
+    },
   ];
 
   return (
