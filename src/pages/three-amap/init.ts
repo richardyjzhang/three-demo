@@ -52,7 +52,7 @@ export const init = () => {
 
   const camera = createCamera();
   const orbitControl = new OrbitControls(camera, renderer3D.domElement);
-  orbitControl.enableZoom = false;
+  // orbitControl.enableZoom = false;
 
   // 光
   const ambientLight = new THREE.AmbientLight(0x000000);
