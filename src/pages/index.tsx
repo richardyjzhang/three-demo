@@ -31,17 +31,17 @@ const HomePage: React.FC = () => {
   const demos: ICardProps[] = [
     {
       description: "使用精灵创建一个上下浮动的文字面板",
-      address: "floating-text-board",
+      address: "/floating-text-board",
       img: img1,
     },
     {
       description: "UV映射示例，将整个照片贴在多个Mesh上，组建拼接屏",
-      address: "splicing-screen",
+      address: "/splicing-screen",
       img: img2,
     },
     {
       description: "UV映射及材质分组示例，根据法相判断不同的材质",
-      address: "obj-texture",
+      address: "/obj-texture",
       img: img3,
     },
     {
