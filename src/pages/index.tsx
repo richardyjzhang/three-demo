@@ -4,6 +4,7 @@ import img1 from "../public/screenshots/floating-text-board.png";
 import img2 from "../public/screenshots/splicing-screen.png";
 import img3 from "../public/screenshots/obj-texture.png";
 import img4 from "../public/screenshots/three-amap.png";
+import img5 from "../public/screenshots/obj-upload.png";
 import styles from "./index.css";
 
 interface ICardProps {
@@ -47,8 +48,13 @@ const HomePage: React.FC = () => {
     },
     {
       description: "三维集成高德地图",
-      address: "three-amap",
+      address: "/three-amap",
       img: img4,
+    },
+    {
+      description: "上传OBJ模型并加载渲染",
+      address: "/obj-upload",
+      img: img5,
     },
   ];
 

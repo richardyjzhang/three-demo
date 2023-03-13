@@ -1,0 +1,16 @@
+.root {
+    height: 100vh;
+}
+
+.uploadButton {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: large;
+}
+
+.transparentButton {
+    position: absolute;
+    top: 60px;
+    left: 24px;
+}
