@@ -5,6 +5,7 @@ import img2 from "../public/screenshots/splicing-screen.png";
 import img3 from "../public/screenshots/obj-texture.png";
 import img4 from "../public/screenshots/three-amap.png";
 import img5 from "../public/screenshots/obj-upload.png";
+import img6 from "../public/screenshots/alpha-hash.png";
 import styles from "./index.css";
 
 interface ICardProps {
@@ -55,6 +56,11 @@ const HomePage: React.FC = () => {
       description: "上传OBJ模型并加载渲染",
       address: "/obj-upload",
       img: img5,
+    },
+    {
+      description: "使用AlphaHash模仿点云",
+      address: "/alpha-hash",
+      img: img6,
     },
   ];
 
