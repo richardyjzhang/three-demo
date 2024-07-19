@@ -1215,6 +1215,11 @@
   resolved "https://registry.npmmirror.com/@tweenjs/tween.js/-/tween.js-18.6.4.tgz"
   integrity sha512-lB9lMjuqjtuJrx7/kOkqQBtllspPIN+96OvTCeJ2j5FEzinoAXTdAMFnDAQT1KVPRlnYfBrqxtqP66vDM40xxQ==
 
+"@tweenjs/tween.js@~23.1.2":
+  version "23.1.2"
+  resolved "https://registry.npmmirror.com/@tweenjs/tween.js/-/tween.js-23.1.2.tgz#4e5357fd6742f5aa50447d3fa808aed4cda93ed7"
+  integrity sha512-kMCNaZCJugWI86xiEHaY338CU5JpD0B97p1j1IKNn/Zto8PgACjQx0UxbHjmOcLl/dDOBnItwD07KmCs75pxtQ==
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.19"
   resolved "https://registry.npmmirror.com/@types/babel__core/-/babel__core-7.1.19.tgz"
@@ -1397,17 +1402,26 @@
     "@types/mime" "*"
     "@types/node" "*"
 
-"@types/three@^0.143.0":
-  version "0.143.0"
-  resolved "https://registry.npmmirror.com/@types/three/-/three-0.143.0.tgz"
-  integrity sha512-c5PonXOt8xk5q4ygmyjOX4Ec+FA7gwfdcMT/PveE9xrJs/0DDcf2lJkWrhEcmvx2ZefQCQBcogABnGqB0P4OsA==
+"@types/stats.js@*":
+  version "0.17.3"
+  resolved "https://registry.npmmirror.com/@types/stats.js/-/stats.js-0.17.3.tgz#705446e12ce0fad618557dd88236f51148b7a935"
+  integrity sha512-pXNfAD3KHOdif9EQXZ9deK82HVNaXP5ZIF5RP2QG6OQFNTaY2YIetfrE9t528vEreGQvEPRDDc8muaoYeK0SxQ==
+
+"@types/three@^0.166.0":
+  version "0.166.0"
+  resolved "https://registry.npmmirror.com/@types/three/-/three-0.166.0.tgz#a220b9ffecb7b650e2fdc6ef982285e651ec5dbe"
+  integrity sha512-FHMnpcdhdbdOOIYbfkTkUVpYMW53odxbTRwd0/xJpYnTzEsjnVnondGAvHZb4z06UW0vo6WPVuvH0/9qrxKx7g==
   dependencies:
+    "@tweenjs/tween.js" "~23.1.2"
+    "@types/stats.js" "*"
     "@types/webxr" "*"
+    fflate "~0.8.2"
+    meshoptimizer "~0.18.1"
 
 "@types/webxr@*":
-  version "0.5.0"
-  resolved "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.0.tgz"
-  integrity sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA==
+  version "0.5.19"
+  resolved "https://registry.npmmirror.com/@types/webxr/-/webxr-0.5.19.tgz#463a27bc06ff1c0a0c997e86b48bf24c5f50a4af"
+  integrity sha512-4hxA+NwohSgImdTSlPXEqDqqFktNgmTXQ05ff1uWam05tNGroCMp4G+4XVl6qWm1p7GQ/9oD41kAYsSssF6Mzw==
 
 "@types/yargs-parser@*":
   version "21.0.0"
@@ -3258,6 +3272,11 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
+fflate@~0.8.2:
+  version "0.8.2"
+  resolved "https://registry.npmmirror.com/fflate/-/fflate-0.8.2.tgz#fc8631f5347812ad6028bbe4a2308b2792aa1dea"
+  integrity sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==
+
 fill-range@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/fill-range/-/fill-range-4.0.0.tgz"
@@ -4342,6 +4361,11 @@ merge2@^1.2.3, merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmmirror.com/merge2/-/merge2-1.4.1.tgz"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
+
+meshoptimizer@~0.18.1:
+  version "0.18.1"
+  resolved "https://registry.npmmirror.com/meshoptimizer/-/meshoptimizer-0.18.1.tgz#cdb90907f30a7b5b1190facd3b7ee6b7087797d8"
+  integrity sha512-ZhoIoL7TNV4s5B6+rx5mC//fw8/POGyNxS/DZyCJeiZ12ScLfVwRE/GfsxwiTkMYYD5DmK2/JXnEVXqL4rF+Sw==
 
 micromatch@^3.1.4:
   version "3.1.10"
@@ -5912,10 +5936,10 @@ thread-stream@^0.15.1:
   dependencies:
     real-require "^0.1.0"
 
-three@^0.143.0:
-  version "0.143.0"
-  resolved "https://registry.npmmirror.com/three/-/three-0.143.0.tgz"
-  integrity sha512-oKcAGYHhJ46TGEuHjodo2n6TY2R6lbvrkp+feKZxqsUL/WkH7GKKaeu6RHeyb2Xjfk2dPLRKLsOP0KM2VgT8Zg==
+three@^0.166.1:
+  version "0.166.1"
+  resolved "https://registry.npmmirror.com/three/-/three-0.166.1.tgz#322cfc48fff4e751cd47d61fd1558c387d098d7c"
+  integrity sha512-LtuafkKHHzm61AQA1be2MAYIw1IjmhOUxhBa0prrLpEMWbV7ijvxCRHjSgHPGp2493wLBzwKV46tA9nivLEgKg==
 
 timers-browserify@^2.0.4:
   version "2.0.12"
